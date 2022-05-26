@@ -10,12 +10,50 @@
                     <div class="profile_img">
                         <img src="logo.jpg" class="cover">
                     </div>
-                    <h3>arteminosa<br><span>Andromeda, Milky Way</span></h3>
+                    <h3 class="allText">arteminosa<br><span>Andromeda, Milky Way</span></h3>
                 </div>
                 <div>
                     <img src="dot.png" class="dot">
                 </div>
             </div>
+            <div class="imgTo">
+                <img src="bg.jpg" class="cover">
+            </div>
+            <div class="actionBtns">
+                <div class="left">
+                    <img src="heart.png" class="heart" onclick="likeBttn()">
+                    <img src="comment.png">
+                    <img src="share.png">
+                </div>
+                <div class="right">
+                    <img src="bookmark.png">
+                </div>
+            </div>
+            <h4 class="likes allText">4,694 likes</h4>
+            <h4 class="message allText"><b class="allText">arteminosa</b> oh, wow i cant believe u followed me, its been so long ago <br><span><a href="https://www.instagram.com/explore/tags/ui_ux/">#ui_ux</a></span> <span><a href="https://www.instagram.com/explore/tags/html/">#html</a></span> <span><a href="https://www.instagram.com/explore/tags/css/">#css</a></span></h4>
+            <h4 class="comments">View all 148 comments</h4>
+            <div class="addComments">
+                <div class="userImg">
+                    <img src="user.jpg" class="cover">
+                </div>
+                <input type="text" class="text" placeholder="Add a comment...">
+            </div>
+            <h5 class="postTime">8 hours ago</h5>
         </div>
+
+        <script>
+            function likeBttn() {
+                let heart = document.querySelector('.heart');
+                let likes = document.querySelector('.likes');
+                if (heart.src.match("heart.png")){
+                    heart.src = "heart_red.png";
+                    likes.innerHTML = "4,695 likes";
+                }
+                else{
+                    heart.src = "heart.png";
+                    likes.innerHTML = "4,694 likes";
+                }
+            }
+        </script>
     </body>
 </html>
